@@ -12,14 +12,13 @@ Vue.js, Tailwind CSS, Node.js (Express.js) ve MySQL kullanılarak geliştirilmi�
 ###  İşlem Yönetimi
 - Gelir ve gider kayıtları
 - Kategorilere göre harcama takibi
-- Gelişmiş arama ve filtreleme
+- Arama ve filtreleme
 - Tarih bazlı filtreleme
 
 ###  Dashboard ve Analiz
 - Özet görünüm (Gelir, Gider, Bakiye)
 - Aylık trend grafikleri (Line Chart)
 - Kategori dağılım grafikleri (Pie Chart)
-- Kategori bazında detaylı istatistikler
 - Tarih aralığına göre filtreleme
 
 ###  Kullanıcı Deneyimi
@@ -50,7 +49,7 @@ cp backend/.env.example backend/.env
 
 Ardından `backend/.env` dosyasını düzenleyin ve kendi veritabanı bilgilerinizi girin.
 
-**Önemli:** `JWT_SECRET` için güçlü bir rastgele string kullanın (production ortamında).
+`JWT_SECRET` için güçlü bir rastgele string kullanın (production ortamında).
 
 Veritabanı şemasını oluşturun:
 ```bash
