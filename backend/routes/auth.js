@@ -32,13 +32,10 @@ router.post('/register', async (req, res) => {
       [name, email, hashedPassword]
     );
 
-    // Kullanıcının zaten kategorileri var mı kontrol et
     const [existingCategories] = await db.query(
       'SELECT COUNT(*) as count FROM categories WHERE user_id = ?',
       [result.insertId]
     );
-
-    // Eğer kategoriler yoksa default kategorileri ekle
     if (existingCategories[0].count === 0) {
       const defaultCategories = [
         ['Maaş', 'income', '#10B981'],
